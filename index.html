@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>FoodieSpot - Restaurant Landing Page</title>
+
+  <!-- Styles & Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-white text-[#333333] scroll-smooth">
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 bg-white transition duration-300 shadow">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <div class="text-2xl font-bold text-[#D35400]">FoodieSpot</div>
+            <nav class="hidden md:flex space-x-6 text-[#333333] font-medium">
+                <a href="#home" class="hover:text-[#D35400] transition transform">Home</a>
+                <a href="#menu" class="hover:text-[#D35400] transition transform">Menu</a>
+                <a href="#offers" class="hover:text-[#D35400] transition transform">Offers</a>
+                <a href="#contact" class="hover:text-[#D35400] transition transform">Contact</a>
+            </nav>
+            <a href="#reservation" class="bg-[#D35400] text-white px-4 py-2 rounded hover:bg-[#e04c00] font-semibold transition transform hover:scale-105 hover:shadow-lg">Reserve Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center text-center text-[#D35400] relative">
+        <div class="hero-bg absolute inset-0" style="background-image: url('assets/img/pexels-hasan-kurt-154798938-10749578.jpg');"></div>
+        <div class="absolute inset-0 bg-[#2C3E50] bg-opacity-50"></div>
+
+        <div class="fade-in-init z-10 p-8 rounded-lg">
+            <h1 class="text-5xl font-bold mb-4">Enjoy the Freshest Delicious Meals</h1>
+            <p class="text-lg mb-6 text-gray-200">Short introduction about the restaurant.</p>
+            <a href="#menu" class="bg-[#D35400] text-white px-6 py-3 rounded hover:bg-[#f04c00] font-semibold transition transform hover:scale-105 hover:shadow-lg">
+                View Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="bg-[#FFFFFF] py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center fade-in-init">
+            <h2 class="text-3xl font-bold mb-12 text-[#D35400]">Why Choose Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="feature-item bg-white p-6 rounded shadow">
+                    <div class="text-[#D35400] text-5xl mb-4">
+                    🍃
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-[#333333]">Fresh Ingredients</h3>
+                    <p class="text-[#333333]">We use only the freshest produce and meats to ensure top quality in every dish.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-item bg-white p-6 rounded shadow">
+                    <div class="text-[#D35400] text-5xl mb-4">
+                    🍽️
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-[#333333]">Special Recipes</h3>
+                    <p class="text-[#333333]">Our chefs craft unique recipes that blend tradition with creativity.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-item bg-white p-6 rounded shadow">
+                    <div class="text-[#D35400] text-5xl mb-4">
+                    ⏱️
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-[#333333]">Fast Delivery</h3>
+                    <p class="text-[#333333]">Enjoy your favorite meals delivered hot and fresh to your doorstep.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Our Menu Section -->
+    <section id="menu" class="bg-[#FFFFFF] py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center fade-in-init">
+            <h2 class="text-3xl font-bold mb-8 text-[#D35400]">Our Menu</h2>
+
+            <!-- Filter Buttons -->
+            <div class="flex justify-center gap-4 mb-10">
+                <button class="filter-btn px-4 py-2 rounded border border-[#D35400] text-[#D35400] hover:bg-[#D35400] hover:text-white transition transform hover:scale-105 hover:shadow-lg" data-category="all">All</button>
+                <button class="filter-btn px-4 py-2 rounded border border-[#D35400] text-[#D35400] hover:bg-[#D35400] hover:text-white transition transform hover:scale-105 hover:shadow-lg" data-category="drinks">Drinks</button>
+                <button class="filter-btn px-4 py-2 rounded border border-[#D35400] text-[#D35400] hover:bg-[#D35400] hover:text-white transition transform hover:scale-105 hover:shadow-lg" data-category="desserts">Desserts</button>
+                <button class="filter-btn px-4 py-2 rounded border border-[#D35400] text-[#D35400] hover:bg-[#D35400] hover:text-white transition transform hover:scale-105 hover:shadow-lg" data-category="main">Main</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item main bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-harry-dona-2338407.jpg" alt="Grilled Chicken" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">Grilled Chicken</h3>
+                    <p class="text-[#F1C40F] font-bold">$21.00</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-item desserts bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-ash-craig-122861-376464.jpg" alt="Pancakes" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">Pancakes</h3>
+                    <p class="text-[#F1C40F] font-bold">$18.00</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-item main bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-vanmalidate-769289.jpg" alt="Beef Steak" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">Beef Steak</h3>
+                    <p class="text-[#F1C40F] font-bold">$68.00</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-item drinks bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-suju-1233319.jpg" alt="Fresh Juice" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">Fresh Juice</h3>
+                    <p class="text-[#F1C40F] font-bold">$12.00</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-item drinks bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-hasanalbari-1493080.jpg" alt="Tea" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">Tea</h3>
+                    <p class="text-[#F1C40F] font-bold">$8.00</p>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-item drinks bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-karolina-grabowska-4389665.jpg" alt="Coca Cola" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">Coca Cola</h3>
+                    <p class="text-[#F1C40F] font-bold">$10.00</p>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="menu-item desserts bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-changerstudio-140831.jpg" alt="White Cake" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">White Cake</h3>
+                    <p class="text-[#F1C40F] font-bold">$35.00</p>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="menu-item desserts bg-[#FAF6F2] p-4 rounded shadow">
+                    <img src="assets/img/pexels-meli-di-rocco-303801-940872.jpg" alt="Macaroons" class="rounded mb-4">
+                    <h3 class="text-xl font-semibold text-[#333333]">Macaroons</h3>
+                    <p class="text-[#F1C40F] font-bold">$35.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Special Offer Section -->
+    <section id="offers" class="bg-[#FFFFFF] py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center fade-in-init">
+            <h2 class="text-3xl font-bold mb-8 text-[#D35400]">Special Offer</h2>
+
+            <div class="bg-white rounded shadow p-6 flex flex-col md:flex-row items-center gap-6">
+                <!-- Offer Image -->
+                <img src="assets/img/pexels-johnny-rizk-1550304-2987564.jpg" alt="Special Offer" class="rounded w-full md:w-1/2">
+
+                <!-- Offer Details -->
+                <div class="text-left md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-[#F1C40F] mb-2">Weekend Feast – 25% Off</h3>
+                    <p class="text-[#333333] mb-4">Enjoy a delicious combo of our best dishes at a special discounted price. Offer ends soon!</p>
+
+                    <!-- Countdown Timer -->
+                    <div class="text-[#D35400] text-xl font-bold" id="countdown">
+                    Loading countdown...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="bg-[#FFFFFF] py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center fade-in-init">
+            <h2 class="text-3xl font-bold mb-8 text-[#D35400]">What Our Customers Say</h2>
+
+            <div class="overflow-hidden relative">
+                <div id="testimonial-track" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full px-6">
+                        <img src="assets/img/pexels-olly-733872.jpg" alt="Customer 1" class="mx-auto rounded-full mb-4">
+                        <h3 class="text-xl font-semibold text-[#2C3E50]">Sarah M.</h3>
+                        <p class="text-gray-600 mt-2">“Absolutely loved the food and the ambiance. Will definitely come back!”</p>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="min-w-full px-6">
+                        <img src="assets/img/pexels-apunto-group-agencia-de-publicidad-53086916-7752893.jpg" alt="Customer 2" class="mx-auto rounded-full mb-4">
+                        <h3 class="text-xl font-semibold text-[#2C3E50]">Ahmed K.</h3>
+                        <p class="text-gray-600 mt-2">“The grilled steak was perfect. Great service and fast delivery!”</p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="min-w-full px-6">
+                        <img src="assets/img/pexels-danxavier-1239291.jpg" alt="Customer 3" class="mx-auto rounded-full mb-4">
+                        <h3 class="text-xl font-semibold text-[#2C3E50]">Lina B.</h3>
+                        <p class="text-gray-600 mt-2">“A hidden gem! The desserts were heavenly.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[##FFFFFF] py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 fade-in-init">
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-3xl font-bold text-[#D35400] mb-6">Make a Reservation</h2>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded">
+                    <input type="tel" placeholder="Your Phone Number" class="w-full p-3 border border-gray-300 rounded">
+                    <input type="date" class="w-full p-3 border border-gray-300 rounded">
+                    <input type="number" name="no-of-guests" id="no-of-guests" placeholder="Number of Guests" class="w-full p-3 border border-gray-300 rounded">
+                    <button type="submit" class="bg-[#D35400] text-white px-6 py-3 rounded hover:bg-[#E67E22] transition transform hover:scale-105 hover:shadow-lg">
+                        Send Request
+                    </button>
+                </form>
+            </div>
+
+            <!-- Google Map -->
+            <div>
+                <h2 class="text-3xl font-bold text-[#D35400] mb-6">Find Us</h2>
+                <div class="rounded overflow-hidden shadow-lg">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.123456789!2d31.235711!3d30.044420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840c123456789%3A0xabcdef123456789!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1610000000000"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2C3E50] text-white py-10 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left fade-in-init">
+            <!-- Logo / Site Name -->
+            <div>
+                <h3 class="text-2xl font-bold text-[#D35400]">FoodieSpot</h3>
+                <p class="mt-2 text-gray-300">Delicious moments, delivered fresh.</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div>
+                <h4 class="text-xl text-[#D35400] font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-[#D35400] transition">Home</a></li>
+                    <li><a href="#menu" class="hover:text-[#D35400] transition">Menu</a></li>
+                    <li><a href="#offers" class="hover:text-[#D35400] transition">Offers</a></li>
+                    <li><a href="#contact" class="hover:text-[#D35400] transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h4 class="text-xl text-[#D35400] font-semibold mb-4">Follow Us</h4>
+
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="hover:text-[#D35400] transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-[#D35400] transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-[#D35400] transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-10 text-center text-gray-400 text-sm fade-in-init">
+            &copy; 2025 FoodieSpot. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
