@@ -19,13 +19,34 @@
     <header id="header" class="fixed top-0 left-0 w-full z-50 bg-white transition duration-300 shadow">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
             <div class="text-2xl font-bold text-[#D35400]">FoodieSpot</div>
-            <nav class="hidden md:flex space-x-6 text-[#333333] font-medium">
-                <a href="#home" class="hover:text-[#D35400] transition transform">Home</a>
-                <a href="#menu" class="hover:text-[#D35400] transition transform">Menu</a>
-                <a href="#offers" class="hover:text-[#D35400] transition transform">Offers</a>
-                <a href="#contact" class="hover:text-[#D35400] transition transform">Contact</a>
+
+            <!-- Hamburger Button for mobile -->
+            <button id="menu-toggle" class="md:hidden text-[#2C3E50] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-[#333333] hover:text-[#D35400]">Home</a>
+                <a href="#menu" class="text-[#333333] hover:text-[#D35400]">Menu</a>
+                <a href="#offers" class="text-[#333333] hover:text-[#D35400]">Offers</a>
+                <a href="#contact" class="text-[#333333] hover:text-[#D35400]">Contact</a>
+                <a href="#reservation" class="bg-[#D35400] text-white px-4 py-2 rounded hover:bg-[#e04c00] font-semibold">Reserve Now</a>
             </nav>
-            <a href="#reservation" class="bg-[#D35400] text-white px-4 py-2 rounded hover:bg-[#e04c00] font-semibold transition transform hover:scale-105 hover:shadow-lg">Reserve Now</a>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg transition-all duration-300 overflow-hidden max-h-0">
+            <div class="flex flex-col px-6 py-4 space-y-2">
+                <a href="#home" class="text-[#333333] hover:text-[#D35400]">Home</a>
+                <a href="#menu" class="text-[#333333] hover:text-[#D35400]">Menu</a>
+                <a href="#offers" class="text-[#333333] hover:text-[#D35400]">Offers</a>
+                <a href="#contact" class="text-[#333333] hover:text-[#D35400]">Contact</a>
+                <a href="#reservation" class="bg-[#D35400] text-white px-4 py-2 rounded hover:bg-[#e04c00] font-semibold text-center">Reserve Now</a>
+            </div>
         </div>
     </header>
 
@@ -292,4 +313,5 @@
     </footer>
 
     <script src="assets/script.js"></script>
+
 </body>
