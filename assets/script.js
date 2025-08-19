@@ -11,6 +11,24 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const toggleBtn = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+let isOpen = false;
+
+toggleBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0";
+});
+
+// Optional: Close menu when clicking outside
+document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0";
+    }
+});
+
 // Hero background fade-in
 window.addEventListener("load", () => {
     document.querySelector(".hero-bg").classList.add("loaded");
@@ -103,3 +121,4 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000);
+
